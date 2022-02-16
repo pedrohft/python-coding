@@ -13,4 +13,5 @@ group_diesel = df_diesel.groupby(['ESTADO','COMBUSTÍVEL'])
 
 diesel_year_month = df_diesel.loc[df_diesel['ANO'].isin([2013])]
 
-print(diesel_year_month.stack())
+s = diesel_year_month.stack(0).to_frame()
+print(s)
