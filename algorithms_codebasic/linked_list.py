@@ -126,18 +126,37 @@ class LinkedList:
     def print_backward(self):
         pass
 
+    def get_middle(self):
+        
+        l = self.get_length()
+
+        if l == 0:
+            return -1
+
+        m = (l//2)
+        itr = self.head
+        count = 0
+        while itr:
+            if count == m:
+                return itr.data
+
+            count +=1
+            itr = itr.next
+
+
 if __name__ == '__main__':
     ll = LinkedList()
-    ll.insert_values(["banana","mango","grapes","orange"])
+    ll.insert_values([1,2,3,4,5,6])
     ll.print()
-    ll.insert_after_value("mango","apple")
-    ll.print()
-    ll.remove_by_value("orange")
-    ll.print()
-    ll.remove_by_value("figs")
-    ll.print()
-    ll.remove_by_value("banana")
-    ll.remove_by_value("mango")
-    ll.remove_by_value("apple")
-    ll.remove_by_value("grapes")
-    ll.print()
+    print(ll.get_middle())
+    # ll.insert_after_value("mango","apple")
+    # ll.print()
+    # ll.remove_by_value("orange")
+    # ll.print()
+    # ll.remove_by_value("figs")
+    # ll.print()
+    # ll.remove_by_value("banana")
+    # ll.remove_by_value("mango")
+    # ll.remove_by_value("apple")
+    # ll.remove_by_value("grapes")
+    # ll.print()
