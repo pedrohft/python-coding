@@ -1,4 +1,4 @@
-##This solution get time limit exceeds
+##This solution get time limit exceeded
 def duplicates(arr, n):
     d = {}
     aux = []
