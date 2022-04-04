@@ -44,6 +44,5 @@ def getNthFromLast(head,n):
             return itr.data
             
         count +=1
-        l -=1
         itr = itr.next
     
