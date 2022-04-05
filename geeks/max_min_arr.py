@@ -4,8 +4,6 @@ def getMinMax( a, n):
     maximum = a[0]
     arr = []
     for i in range(0,n):
-        # maximum = a[i]
-        # minimum = a[i]
         if maximum < a[i]:
             maximum = a[i]
         elif minimum > a[i]:
