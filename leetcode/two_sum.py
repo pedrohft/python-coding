@@ -22,4 +22,4 @@ class Solution:
         return 
            
 
-print(Solution.twoSum([3,2,4], 6))
+print(Solution.twoSum([1,2,4,4], 8))

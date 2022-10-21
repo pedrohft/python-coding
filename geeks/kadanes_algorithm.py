@@ -13,7 +13,7 @@ class Solution:
     #             return -1
     #     return max_so_far
 
-    def maxSubArraySum(self, arr, N):
+    def maxSubArraySum(self, a, N):
         max_so_far =a[0]
         max_ending_here = a[0]
 
