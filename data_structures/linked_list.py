@@ -145,13 +145,17 @@ class LinkedList:
             if slower_pointer == faster_pointer:
                 return True
         return False
+    # todo
+    def reverse_between(self, m , n):
+        if (self.head.next) is None or (self.head is None):
+            return None
     
 def find_kth_from_end(l, k):
     slow = l.head
     fast = l.head
     for i in range(k-1):
         fast = fast.next
-        
+
     if fast is None:
         return None
 
