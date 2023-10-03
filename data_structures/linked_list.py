@@ -145,10 +145,28 @@ class LinkedList:
             if slower_pointer == faster_pointer:
                 return True
         return False
-    # todo
-    def reverse_between(self, m , n):
-        if (self.head.next) is None or (self.head is None):
-            return None
+
+    def reverse_between(self, start_index , end_index):
+     
+        if self.length <= 1:
+            return
+
+        dummy_node = Node(0)
+        dummy_node.next = self.head
+        previous_node = dummy_node
+
+        for _ in range(start_index):
+            previous_node = previous_node.next
+        
+        current_node = previous_node.next
+
+        for _ in range(end_index - start_index):
+            node_to_move = current_node.next
+            current_node.next = node_to_move.next
+            node_to_move.next =  previous_node.next
+            previous_node.next = node_to_move
+        
+        self.head = dummy_node.next
     
 def find_kth_from_end(l, k):
     slow = l.head
@@ -164,7 +182,6 @@ def find_kth_from_end(l, k):
         fast = fast.next
 
     return slow
-
         
 
 def main():
@@ -175,8 +192,7 @@ def main():
     my_linked_list.append(5)
 
     k = 2
-    result = find_kth_from_end(my_linked_list, k)
-    print(result.value)
+    my_linked_list.reverse_between(2, 4)
 
 if __name__ == "__main__":
     main()
